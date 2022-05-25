@@ -44,9 +44,9 @@ function inputDataEnter() {
       const languages = Object.values(data[0].languages).join(', ');
 
       const markupInfo = `<ul class="info-list">
-      <li class="list-item">Capital: ${data[0].capital}</li>
-      <li class="list-item">Population: ${data[0].population}</li>
-      <li class="list-item">Languages: ${languages}</li>
+      <li class="list-item">Capital: <p class="discription-item">${data[0].capital}</p></li>
+      <li class="list-item">Population: <p class="discription-item">${data[0].population}</p></li>
+      <li class="list-item">Languages: <p class="discription-item">${languages}</p></li>
       </ul>`;
 
       countryInfo.insertAdjacentHTML('afterbegin', markupInfo);

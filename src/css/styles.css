@@ -38,6 +38,8 @@ align-items: start;
 
 .info-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .country-name{
@@ -47,9 +49,15 @@ align-items: start;
 .list-item{
   font-size: 30px;
   font-weight: bold;
+  display: flex;
+  align-items: baseline;
 }
 
 .discription-item{
+  
   font-size: 25px;
   font-weight: normal;
+  display: flex;
+  margin-left: 10px;
+  
 }
