@@ -44,7 +44,7 @@ function inputDataEnter() {
       const languages = Object.values(data[0].languages).join(', ');
 
       const markupInfo = `<ul class="info-list">
-      <li class="list-item">Capital: ${data[0].capital.addClass('discription')}</li>
+      <li class="list-item">Capital: ${data[0].capital}</li>
       <li class="list-item">Population: ${data[0].population}</li>
       <li class="list-item">Languages: ${languages}</li>
       </ul>`;
