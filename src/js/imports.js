@@ -1,4 +1,4 @@
-import fetchCountries from './fetchCountries';
+import { fetchCountries } from './fetchCountries';
 import debounce from 'lodash.debounce';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
@@ -36,17 +36,17 @@ function inputDataEnter() {
   function markup(data) {
     const markupData = data
       .map(({ flags: { svg }, name: { official } }) => {
-        return `<li><img src="${svg}" alt="${official}" width="100" height="50"/>${official}</li>`;
+        return `<li class="country-name"><img class="flag" src="${svg}" alt="${official}" width="100" height="50"/>${official}</li>`;
       })
       .join('');
 
     if (data.length === 1) {
       const languages = Object.values(data[0].languages).join(', ');
 
-      const markupInfo = `<ul>
-      <li>Capital: ${data[0].capital}</li>
-      <li>Population: ${data[0].population}</li>
-      <li>Languages: ${languages}</li>
+      const markupInfo = `<ul class="info-list">
+      <li class="list-item">Capital: ${data[0].capital}</li>
+      <li class="list-item">Population: ${data[0].population}</li>
+      <li class="list-item">Languages: ${languages}</li>
       </ul>`;
 
       countryInfo.insertAdjacentHTML('afterbegin', markupInfo);
